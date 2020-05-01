@@ -7,9 +7,16 @@
 ##  Better off just writing a Python script, but there are still times when  we 
 ##  must use a shell script. 
 ##
-## Usage: ./shell_pargs.sh -h 
+## Usage examples: 
+##  $ ./shell_pargs.sh -h 
+##  $ ./shell_pargs.sh ls (default dir .) 
+##  $ ./shell_pargs.sh ls=/etc 
+##  $ ./shell_pargs.sh ls=/etc  --long
 ##
 ## Author: Bill Fanselow
+
+
+MYNAME='shell_pargs.sh'
 
 ## Set Defaults
 DIR='.'
@@ -19,20 +26,27 @@ MODE='short'
 ## Print all usage details
 usage()
 {
+    exit_code=$1
+
     echo "Usage:"
     echo ""
-    echo "./simple_args_parsing.sh"
+    echo "./$MYNAME"
     echo "  -h --help"
     echo "  ls=<dir>"
     echo "  --long"
     echo ""
+
+    if [ "X${exit_code}" != "X" ]; then
+      exit $exit_code
+    fi
 }
 ##-----------------------------------------------------------------------------
 ## main()
 ##-----------------------------------------------------------------------------
 ## If we require some input
 if [ "$1" = "" ]; then
-   usage
+   echo "Cmd-line error: must provide input" 
+   usage 1 
 fi
 
 ## Parse the args: key/value pairs are assumed to passed as "<key>=<val>"
@@ -41,7 +55,7 @@ while [ "$1" != "" ]; do
     VALUE=`echo $1 | awk -F= '{print $2}'`
     case $PARAM in
         -h | --help)
-            usage
+            usage 0
             exit
             ;;
         ls)
@@ -52,7 +66,7 @@ while [ "$1" != "" ]; do
             ;;
         *)
             echo "ERROR: unknown parameter \"$PARAM\""
-            usage
+            usage 0
             exit 1
             ;;
     esac
