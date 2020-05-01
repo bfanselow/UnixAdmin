@@ -45,7 +45,8 @@ usage()
 ##-----------------------------------------------------------------------------
 ## If we require some input
 if [ "$1" = "" ]; then
-   echo "Cmd-line error: must provide input" 
+   echo ""
+   echo "$MYNAME: Cmd-line ERROR: must provide input" 
    usage 1 
 fi
 
@@ -65,7 +66,7 @@ while [ "$1" != "" ]; do
             MODE='long' 
             ;;
         *)
-            echo "ERROR: unknown parameter \"$PARAM\""
+            echo "$MYNAME: Cmd-line ERROR: unknown parameter \"$PARAM\""
             usage 0
             exit 1
             ;;
