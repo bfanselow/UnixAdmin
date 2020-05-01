@@ -3,7 +3,9 @@
 ##
 ## File: shell_pargs.sh
 ## Description:
-##  Demonstate a simple way to parse command-line args in (Bourne) shell-script 
+##  Demonstate a simple way to parse command-line args in (Bourne) shell-script.
+##  Better off just writing a Python script, but there are still times when  we 
+##  must use a shell script. 
 ##
 ## Usage: ./shell_pargs.sh -h 
 ##
@@ -14,6 +16,7 @@ DIR='.'
 MODE='short'
 
 ##-----------------------------------------------------------------------------
+## Print all usage details
 usage()
 {
     echo "Usage:"
@@ -25,14 +28,13 @@ usage()
     echo ""
 }
 ##-----------------------------------------------------------------------------
-
+## main()
+##-----------------------------------------------------------------------------
 ## If we require some input
 if [ "$1" = "" ]; then
    usage
 fi
 
-##-----------------------------------------------------------------------------
-## main()
 ## Parse the args: key/value pairs are assumed to passed as "<key>=<val>"
 while [ "$1" != "" ]; do
     PARAM=`echo $1 | awk -F= '{print $1}'`
