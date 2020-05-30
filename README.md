@@ -1,5 +1,5 @@
 # UnixAdmin
-Miscellaneous Unix/Linux system-admin tips, tricks, etc.
+Miscellaneous useful and commonly-needed Unix/Linux system-admin tips, tricks, etc.
 
 ---
 ### Good way to get the same predictable "ps" output on all flavors of new/old Solaris, HP-UX, AIX, Linux, etc.
