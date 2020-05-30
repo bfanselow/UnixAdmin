@@ -7,7 +7,7 @@ Miscellaneous Unix/Linux system-admin tips, tricks, etc.
 ```
 ps -A -o 'user pid ppid pcpu rss etime args'
 ```
-
+---
 ### Find file-systems nodes and perform an operation
 #### Find files ending in .log and remove them if older than 30 days (using -exec arg with find)
 ```
