@@ -68,7 +68,7 @@ sed G __filename__
  sed 's/\x0D$//'            # gsed 3.02.80, but top script is easier
 ```
 
-### convert Unix newlines (LF) to DOS format
+#### convert Unix newlines (LF) to DOS format
 ```
  sed "s/$/`echo -e \\\r`/"            # command line under ksh
  sed 's/$'"/`echo \\\r`/"             # command line under bash
@@ -76,17 +76,17 @@ sed G __filename__
  sed 's/$/\r/'                        # gsed 3.02.80
 ```
 
-### Delete leading whitespace (spaces, tabs) from start of lines
+#### Delete leading whitespace (spaces, tabs) from start of lines
 ```
  sed 's/^[ \t]*//'
 ```
 
-### Delete trailing whitespace (spaces, tabs) from end of each line
+#### Delete trailing whitespace (spaces, tabs) from end of each line
 ```
  sed 's/[ \t]*$//'
 ```
 
-### Delete leading and trailing whitespace from each line
+#### Delete leading and trailing whitespace from each line
 ```
  sed 's/^[ \t]*//;s/[ \t]*$//'
 ```
