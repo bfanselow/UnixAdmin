@@ -59,7 +59,7 @@ sed G __filename__
 
 ### TEXT CONVERSION AND SUBSTITUTION:
 
-(leaving out __filename___ arg for the remainder of these)
+(leaving out \_\_filename\_\_ arg for the remainder of these)
 
 #### convert DOS newlines (CR/LF) to Unix format
 ```
