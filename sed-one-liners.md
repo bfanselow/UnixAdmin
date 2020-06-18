@@ -22,27 +22,27 @@ sed G <filename>
 
 #### triple space a file?  Do you ever need to do that?
 ```
- sed 'G;G' <filename>
+ sed 'G;G' __filename__
 ```
 
 #### Undo double-spacing
 ```
- sed 'n;d'
+ sed 'n;d' __filename__
 ```
 
 #### Insert new blank line above every line which matches "regex"
 ```
- sed '/regex/{x;p;x;}'
+ sed '/regex/{x;p;x;}' __filename__
 ```
 
 #### Insert new blank line below every line which matches "regex"
 ```
- sed '/regex/G'
+ sed '/regex/G' __filename__
 ```
 
 #### Insert new blank lines above and below every line which matches "regex"
 ```
- sed '/regex/{x;p;x;G;}'
+ sed '/regex/{x;p;x;G;}' __filename__
 ```
 
 ### NUMBERING:
@@ -57,12 +57,9 @@ sed G <filename>
  sed '/./=' __filename__ | sed '/./N; s/\n/ /'
 ```
 
-#### count lines (but we already have "wc -l")
-```
- sed -n '$='
-```
-
 ### TEXT CONVERSION AND SUBSTITUTION:
+
+(leaving out __filename___ arg for the remainder of these)
 
 #### convert DOS newlines (CR/LF) to Unix format
 ```
