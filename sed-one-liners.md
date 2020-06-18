@@ -12,12 +12,12 @@ To keep changes in a new file, obviously we need to add **> __newfile__** to eve
 
 ##### double space a file
 ```
-sed G <filename>
+sed G __filename__
 ```
 
 #### If file already has some blank lines in it and we only want to add blank line when it doesn't exist
 ```
- sed '/^$/d;G' <filename>
+ sed '/^$/d;G' __filename__
 ```
 
 #### triple space a file?  Do you ever need to do that?
