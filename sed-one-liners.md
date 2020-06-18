@@ -131,7 +131,7 @@ sed G __filename__
  sed 'n;n;n;n;G;'             # other seds
 ````
 
-### SELECTIVE OF CERTAIN LINES:
+### SELECTING CERTAIN LINES:
 
 #### print the line immediately before a regexp, but not the line containing the regexp
 ```
