@@ -19,5 +19,6 @@ find / -type f | xargs grep password
 ```
 #### Create a specific sized file with random data
 ````
+ openssl rand -base64 -out <filename> <size-bytes>
  openssl rand -base64 -out myfile 2048
 ````
