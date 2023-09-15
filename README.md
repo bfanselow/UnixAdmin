@@ -17,3 +17,7 @@ find /var/log -name "\*.log" -type f -mtime +30 -exec rm -f {} \;
 ```
 find / -type f | xargs grep password
 ```
+#### Create a specific sized file with random data
+````
+ openssl rand -base64 -out myfile 2048
+````
