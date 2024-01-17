@@ -1,6 +1,10 @@
 # UnixAdmin
 Miscellaneous useful and commonly-needed Unix/Linux system-admin tips, tricks, etc.
 
+### Identify dirs/files that filling the disk
+```
+sudo du -hs /*
+```
 ---
 ### Good way to get the same predictable "ps" output on all flavors of new/old Solaris, HP-UX, AIX, Linux, etc.
 #### Simply doing "ps -eaf" can give different results on each of these flavors (other fields can be passed in -o arglist)
