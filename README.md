@@ -28,5 +28,5 @@ find / -type f | xargs grep password
 ````
 #### Convert newline chars to actual newline
 ```
-awk '{gsub(/\\n/,"\n")}1'
+awk '{gsub(/\\n/,"\n")}1' <file>
 ```
