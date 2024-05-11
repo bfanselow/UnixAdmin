@@ -26,3 +26,7 @@ find / -type f | xargs grep password
  openssl rand -base64 -out <filename> <size-bytes>
  openssl rand -base64 -out myfile 2048
 ````
+#### Convert newline chars to actual newline
+```
+awk '{gsub(/\\n/,"\n")}1'
+```
