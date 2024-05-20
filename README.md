@@ -34,7 +34,6 @@ awk '{gsub(/\\n/,"\n")}1' <file>
 http://redsymbol.net/articles/unofficial-bash-strict-mode/
 TL;DR: start all bash scripts with:
 ```
-
 #!/bin/bash
 set -euo pipefail
 IFS=$'\n\t'
