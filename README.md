@@ -30,3 +30,11 @@ find / -type f | xargs grep password
 ```
 awk '{gsub(/\\n/,"\n")}1' <file>
 ```
+#### Set bask "strict" mode
+http://redsymbol.net/articles/unofficial-bash-strict-mode/
+```
+# start all bash script with
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+```
