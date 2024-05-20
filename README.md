@@ -30,7 +30,7 @@ find / -type f | xargs grep password
 ```
 awk '{gsub(/\\n/,"\n")}1' <file>
 ```
-#### Set bask "strict" mode
+#### Set bash "strict" mode
 http://redsymbol.net/articles/unofficial-bash-strict-mode/
 TL;DR: start all bash scripts with:
 ```
