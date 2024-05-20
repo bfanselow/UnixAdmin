@@ -32,8 +32,9 @@ awk '{gsub(/\\n/,"\n")}1' <file>
 ```
 #### Set bask "strict" mode
 http://redsymbol.net/articles/unofficial-bash-strict-mode/
+TL;DR: start all bash scripts with:
 ```
-# start all bash script with
+
 #!/bin/bash
 set -euo pipefail
 IFS=$'\n\t'
